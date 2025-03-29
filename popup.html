@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel 音量控制</title>
+    <style>
+        body {
+            width: 250px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+        .settings-group {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .position-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        .position-option {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .position-option.selected {
+            background-color: #e6e6e6;
+            border-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-group">
+        <h3>滑桿位置設定</h3>
+        <div class="position-options">
+            <div class="position-option" data-position="top-left">左上角</div>
+            <div class="position-option" data-position="top-right">右上角</div>
+            <div class="position-option" data-position="bottom-left">左下角</div>
+            <div class="position-option" data-position="bottom-right">右下角</div>
+        </div>
+    </div>
+
+    <div class="settings-group">
+        <h3>調整 Facebook 音量</h3>
+    <input type="range" id="fbVolumeSlider" min="0" max="100" value="20">
+    <p>Facebook 音量： <span id="fbVolumeValue">20</span>%</p>
+
+    <h3>調整 Instagram 音量</h3>
+    <input type="range" id="igVolumeSlider" min="0" max="100" value="20">
+    <p>Instagram 音量: <span id="igVolumeValue">20</span>%</p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
