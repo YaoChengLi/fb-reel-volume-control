@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Facebook & Instagram 音量控制",
-  "version": "1.2",
+  "name": "Facebook & Instagram 音量控制(測試版)",
+  "author": "一嘟波波曜",
+  "version": "0.9-alpha",
   "description": "允許調整FB reel跟IG影片音量，不然真的有夠大聲",
   "permissions": [
     "activeTab",
